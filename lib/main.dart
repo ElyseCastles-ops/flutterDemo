@@ -1,17 +1,20 @@
 import 'package:flutter/material.dart';
-import 'homepage.dart';
+import 'package:namer_app/view/pages/home_page.dart';
 
-void main() {
-  runApp(const MyApp());
-}
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-  static const String _title = 'Gallery App';
-  // This widget is the root of your application.
+void main() => runApp(Leaf());
+
+class Leaf extends StatelessWidget {
+  const Leaf({Key? key}) : super(key: key);
+
   @override
-  Widget build(BuildContext context) => const MaterialApp(
-        title: _title,
-        debugShowCheckedModeBanner: false,
-        home: MyHomePage(title: 'CASTLES'),
-      );
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      theme: ThemeData(
+        primaryColor: Colors.green,
+        brightness: Brightness.light,
+      ),
+
+      home: HomePage(),
+    );
+  }
 }
